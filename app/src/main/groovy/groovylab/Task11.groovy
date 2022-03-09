@@ -11,6 +11,8 @@ class Task11 {
     private static final String GSTRING_TEMPLATE = "1() 2() 3()"
 
     public static String gstring(String text, int num) {
-        throw UnsupportedOperationException('Not Implemented!')
+        def value_old = num + "()"
+        def value_new = num + "(" + text + ")"
+        return GSTRING_TEMPLATE.replace(value_old, value_new)
     }
 }

@@ -7,6 +7,8 @@ package groovylab
 
 class Task01 {
     public static int sum(int a, int b) {
-        throw UnsupportedOperationException('Not Implemented!')
-    }
+        //throw UnsupportedOperationException('Not Implemented!')
+        return a + b 
+    }    
 }
+    

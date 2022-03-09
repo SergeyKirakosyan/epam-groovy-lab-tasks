@@ -6,9 +6,13 @@ Task08.parseAndFilterJson("{\"Kate\":18,\"Alan\":16,\"Osvald\":27}") == "{\"Kate
 */
 
 package groovylab
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
 
 class Task08 {
     public static String parseAndFilterJson(String input) {
-        throw UnsupportedOperationException('Not Implemented!')
+        def my_slurper = new JsonSlurper()
+        def my_input = my_slurper.parseText(input)
+            return JsonOutput.toJson(my_input.findAll {it.value % 9 == 0})
     }
 }
